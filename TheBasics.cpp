@@ -9,13 +9,16 @@
 
 using namespace std;
 bool containsOnlyLetters(string const &str){
-    //find if itirates a list and sees whether any item in it and checks whether its true or false. Is alpha checks each characters and inserts whjether its an alphabetic char or not into a list which is checked by the if
-    //checks all ranges and gives you the counter location as to where the violating symbol is on the string
-    auto output = find_if(str.begin(),str.end(),[](char const &c){
-        return !isalpha(c);
-    });
-    //If the violating symbol is the end symbol , then it contains only alphabetic letters
-    return output == str.end();
+    bool output = true;
+    for (auto i = 0; i < str.size(); i++)
+    {
+      char c = str[i];
+      int test23 = isalpha(c);
+      if ((test23 == 0) && c != ' '){
+        output = false;
+      } 
+    };
+    return output;
 }
 map <int,int> price_map = {
   {1,25},
