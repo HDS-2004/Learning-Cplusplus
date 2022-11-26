@@ -124,22 +124,11 @@ int main ()
       cout << "Thanks for shopping at idk, please come again!\n";
       exit(EXIT_SUCCESS);
     }else{
-      if(OrderInt == 1){
-          cout << "Item 1 picked. You can continue shopping or check out now"<<endl;
+      if((OrderInt >= 1) && (OrderInt <= 5)){
+          cout << "Item "<<OrderInt<<" picked. You can continue shopping or check out now"<<endl;
           insertArray(&Cart,OrderInt);
-      }else if(OrderInt == 2){
-          cout << "Item 2 picked. You can continue shopping or check out now"<<endl;
-          insertArray(&Cart,OrderInt);
-      }else if(OrderInt == 3){
-          cout << "Item 3 picked. You can continue shopping or check out now"<<endl;
-          insertArray(&Cart,OrderInt);
-      }else if(OrderInt == 4){
-          cout << "Item 4 picked, You can continue shopping or check out now"<<endl;
-          insertArray(&Cart,OrderInt);
-      }else if(OrderInt == 5){
-          cout << "Item 5 picked. You can continue shopping or check out now"<<endl;
-          insertArray(&Cart,OrderInt);
-      }else{
+      }
+      else{
           cout <<"Sorry but that isnt a valid option!" <<endl;
       }
     }
