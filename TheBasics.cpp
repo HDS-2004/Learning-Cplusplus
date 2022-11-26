@@ -13,8 +13,7 @@ bool containsOnlyLetters(string const &str){
     for (auto i = 0; i < str.size(); i++)
     {
       char c = str[i];
-      int test23 = isalpha(c);
-      if ((test23 == 0) && c != ' '){
+      if ((isalpha(c) == 0) && c != ' '){
         output = false;
       } 
     };
